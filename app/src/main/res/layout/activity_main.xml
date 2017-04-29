@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pubnub.example.android.datastream.mapexample.smartrans.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+        </fragment>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="15dp"
+            android:text="Reset"
+            android:alpha="0.75"
+            android:onClick="resetClick"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Bus"
+            android:textSize="@dimen/bus_title_size"/>
+        <TextView
+            android:id="@+id/no_of_seat"
+            android:layout_toRightOf="@id/bus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="@dimen/bus_title_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_top_margin">
+        <TextView
+            android:id="@+id/number_37"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="37"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/number_36"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="36"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_37"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_29"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="29"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_36"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_28"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="28"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_29"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_21"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="21"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_28"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_20"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="20"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_21"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_13"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="13"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_20"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_12"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="12"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_13"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_5"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="5"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_12"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_4"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="4"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_5"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/seat_37"
+        android:layout_width="@dimen/seat_width"
+        android:layout_height="@dimen/seat_height"
+        android:layout_marginLeft="@dimen/seat_left_margin"
+        android:layout_marginRight="@dimen/seat_right_margin"
+        android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_36"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_37"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_29"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_36"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_28"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_29"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_21"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_28"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_20"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_21"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_13"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_20"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_12"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_13"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_5"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_12"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_4"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_5"
+            android:background="@drawable/bus_seat_off" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_top_margin">
+
+        <View
+            android:id="@+id/seat_38"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_35"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_38"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_30"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_35"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_27"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_30"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_22"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_27"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_19"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_22"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_14"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_19"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_11"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_14"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_6"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_11"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_3"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_6"
+            android:background="@drawable/bus_seat_off" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_top_margin">
+
+        <View
+            android:id="@+id/seat_39"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:background="@drawable/bus_seat_off" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_top_margin">
+
+        <View
+            android:id="@+id/seat_40"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_34"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_40"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_31"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_34"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_26"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_31"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_23"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_26"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_18"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_23"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_15"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_18"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_10"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_15"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_7"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_10"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_2"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_7"
+            android:background="@drawable/bus_seat_off" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_top_margin">
+
+        <View
+            android:id="@+id/seat_41"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_33"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_41"
+            android:background="@drawable/bus_seat_off" />
+
+        <View
+            android:id="@+id/seat_32"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_33"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_25"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_32"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_24"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_25"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_17"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_24"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_16"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_17"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_9"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_16"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_8"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_9"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:id="@+id/seat_1"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/seat_8"
+            android:background="@drawable/bus_seat_off" />
+        <View
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_toRightOf="@+id/seat_1"
+            android:background="@drawable/driver_seat"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/number_41"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="41"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/number_33"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="33"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_41"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_32"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="32"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_33"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_25"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="25"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_32"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_24"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="24"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_25"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_17"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="17"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_24"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_16"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="16"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_17"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_9"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="9"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_16"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_8"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="8"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_9"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/number_1"
+            android:layout_width="@dimen/seat_width"
+            android:layout_height="@dimen/seat_height"
+            android:text="1"
+            android:textSize="@dimen/number_size"
+            android:layout_marginLeft="@dimen/seat_left_margin"
+            android:layout_marginRight="@dimen/seat_right_margin"
+            android:layout_toRightOf="@+id/number_8"
+            android:gravity="center"/>
+    </RelativeLayout>
+</LinearLayout>

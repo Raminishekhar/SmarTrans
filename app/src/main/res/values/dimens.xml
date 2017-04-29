@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="bus_title_size">30sp</dimen>
+
+    <dimen name="number_size">12sp</dimen>
+    <dimen name="seat_height">20dp</dimen>
+    <dimen name="seat_width">20dp</dimen>
+    <dimen name="seat_left_margin">5dp</dimen>
+    <dimen name="seat_right_margin">5dp</dimen>
+    <dimen name="line_top_margin">10dp</dimen>
+</resources>
