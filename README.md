@@ -1,4 +1,7 @@
 # SmarTrans
+
+SmarTrans is a very similar application like Uber or Ola but is targeted towards the common man who uses public transportation daily. It updates the user about the real time Location and Seat occupancy in the buses.
+
 SmarTrans is a system developed to make the transit system efficient using information, communication,  and electronic technologies. It locates the real time coordinates of bus to passengers via user application using GPS so that they can determine when to go to the bus stop. Moreover sensors were installed at the base of bus-seats, so that seat occupancy of the public bus can be known. Thus it enables commuters to know beforehand how much occupied the bus is.
 
 Hardware
